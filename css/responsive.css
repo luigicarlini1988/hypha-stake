@@ -295,6 +295,7 @@
 
     .top-right-buttons button {
         width: 100%;
+        min-width: auto;
     }
 
     .extra-nav .foglio.flex.space-center {
@@ -303,5 +304,14 @@
 
     .top-right-buttons {
         margin-top:20px;
+    }
+
+    .logged-in .user-details {
+        display:none;
+    }
+
+    .logged-in img {
+        width:32px;
+        height:32px;
     }
 }

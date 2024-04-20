@@ -894,3 +894,27 @@ img.dao-token {
 .member-det {
     display:grid;
 }
+
+.logged-in {
+    display:flex;
+    align-items: center;
+    gap:12px;
+}
+
+.logged-in .user-details {
+    display:grid;
+    justify-content: end;
+    text-align: right;
+}
+
+.logged-in .user-details {
+    line-height:1.2em;
+}
+
+.logged-in img {
+    width:42px;
+    height:42px;
+    object-fit: cover;
+    border-radius:50px;
+    border:1px solid var(--white);
+}
