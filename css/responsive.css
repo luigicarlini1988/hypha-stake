@@ -170,7 +170,8 @@
         gap: 8px;
  }
  
- .network-banner {
+ .network-banner,
+ .network-banner.empty-state {
     padding:20px;
  }
 

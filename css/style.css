@@ -918,3 +918,24 @@ img.dao-token {
     border-radius:50px;
     border:1px solid var(--white);
 }
+
+.network-banner.empty-state {
+    margin-top:20px;
+    padding:50px;
+}
+
+.network-banner.empty-state:before {
+    opacity:.6;
+}
+
+.empty-cont {
+    position:relative;
+    display:flex;
+    flex-direction: column;
+    gap:20px;
+
+}
+
+.empty-cont button {
+    width:max-content;
+}
