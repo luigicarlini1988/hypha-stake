@@ -17,3 +17,9 @@ function toggleFilters() {
     document.body.classList.toggle("no-scroll");
 }
 
+//extra purpose in DAO details
+function toggleExtraPurpose() {
+    document.getElementById("extra-purpose").classList.toggle("show");
+    document.getElementById("expand-purpose").classList.toggle("shown");
+}
+

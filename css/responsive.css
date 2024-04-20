@@ -21,6 +21,16 @@
     }
 }
 
+@media screen and (max-width:1084px){
+    .dao-details .foglio.flex {
+        flex-wrap:wrap;
+    }
+
+    .details-left {
+        width:100%;
+    }
+}
+
 
 @media screen and (max-width:980px){
     .dao-grid {
@@ -171,6 +181,13 @@
 
 }
 
+@media screen and (max-width:880px){
+
+    .inputs-line {
+        flex-wrap:wrap;
+    }
+}
+
 
 @media screen and (max-width:680px){
     .dao-grid {
@@ -274,5 +291,17 @@
     .filters-body {
         padding:20px;
         height: calc(100svh - 200px);
+    }
+
+    .top-right-buttons button {
+        width: 100%;
+    }
+
+    .extra-nav .foglio.flex.space-center {
+        display:inline;
+    }
+
+    .top-right-buttons {
+        margin-top:20px;
     }
 }

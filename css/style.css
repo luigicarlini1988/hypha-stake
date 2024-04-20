@@ -92,8 +92,19 @@ p {
     line-height:1.2em;
 }
 
+.title-16 {
+    font-size:16px;
+    font-weight:600;
+    line-height:1.2em;
+}
+
 .text-12 {
     font-size:12px;
+    line-height:1.2em;
+}
+
+.text-10 {
+    font-size:10px;
     line-height:1.2em;
 }
 
@@ -103,7 +114,7 @@ button,
     display:flex;
     align-items: center;
     justify-content:center;
-    padding:0px 30px;
+    padding:0px 20px;
     color:var(--white);
     font-weight:400;
     font-size:14px;
@@ -164,6 +175,10 @@ button.secondary:hover,
 }
 .gap-10 {
     gap:10px;
+}
+
+.gap-8 {
+    gap:8px;
 }
 
 .gap-6 {
@@ -770,4 +785,112 @@ input.your-stake-amount {
 
 #filter-modal-pop.show .filters {
     transform:translateY(0px)
+}
+
+
+
+.secondary.back {
+    padding-left:16px;
+    display:flex;
+    gap:6px;
+}
+
+.secondary.back:hover {
+    gap:10px;
+    padding-left:12px;
+}
+
+.extra-nav {
+    margin:20px 0px;
+    
+}
+
+.top-right-buttons button {
+    min-width:120px;
+}
+
+.details-left {
+    width:40%;
+}
+
+.card {
+    background-color:var(--card-blu);
+    padding:20px;
+    border-radius:20px;
+}
+
+.purpose {
+    margin-top:20px;
+}
+
+.expand-purpose {
+    margin-top:10px;
+    cursor:pointer;
+    font-weight:500;
+    align-items: center;
+    display:flex;
+    gap:10px;
+}
+
+.expand-purpose img {
+    transform:rotate(-90Deg);
+}
+
+#expand-purpose.shown img {
+    transform:rotate(-270Deg);
+}
+
+.more-purpose {
+    margin-top:0px;
+    height:0px;
+    overflow: hidden;
+}
+
+.more-purpose.show {
+    margin-top:10px;
+    height:auto;
+} 
+
+.card:not(:first-child) {
+    margin-top:20px;
+}
+
+.details-stake-performance {
+    margin-top:0px;
+    gap:10px;
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.inputs-line {
+    margin-top:18px;
+}
+
+img.dao-token {
+    border-radius:100%;
+}
+
+.members-list {
+    display:flex;
+    flex-wrap: wrap;
+    gap:16px;
+    margin-top:20px;
+}
+
+.item-member {
+    display:flex;
+    align-items: center;
+    gap:6px;
+}
+
+.item-member img {
+    width:26px;
+    height:26px;
+    border-radius:100px;
+    object-fit: cover;
+    border:1px solid var(--white);
+}
+
+.member-det {
+    display:grid;
 }
