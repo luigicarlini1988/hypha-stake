@@ -939,3 +939,59 @@ img.dao-token {
 .empty-cont button {
     width:max-content;
 }
+
+
+/* your dashboard */
+
+.dashboard-top-info {
+        padding: 12px;
+        border-radius: 16px;
+        background: var(--card-blu);
+        width: 100%;
+        display:flex;
+        gap:12px;
+        margin-top:20px;
+    
+}
+
+.your-staked-daos-list {
+    margin-top:20px;
+}
+
+.staked-dao-det {
+    flex-direction: column;
+    align-items: flex-start;
+    line-height:1.4em;
+    padding-left:10px;
+    border-left:1px solid var(--light-blu-trasp);
+}
+
+.staked-dao-top {
+    position:relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.your-dao-avatar {
+    width:26px;
+    height:26px;
+    object-fit: cover;
+    border-radius:50px;
+    border:1px solid var(--white);
+    position:absolute;
+    top: -8px;
+    left: 38px;
+}
+
+.staked-dao-bottom {
+    display:flex;
+    gap:12px;
+    margin-top:20px;
+    padding-top:20px;
+    border-top:1px solid var(--light-blu-trasp);
+}
+
+.your-staked-daos-list {
+    padding-bottom:60px;
+}

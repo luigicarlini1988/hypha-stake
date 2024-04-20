@@ -29,6 +29,20 @@
     .details-left {
         width:100%;
     }
+
+    .dashboard-top-info,
+    .staked-dao-bottom {
+        flex-wrap:wrap;
+        gap:8px;
+    }
+
+    .dashboard-top-info .full-space,
+    .dashboard-top-info .search-container,
+    .staked-dao-bottom .full-space {
+        width:calc(50% - 5px);
+    }
+
+
 }
 
 
@@ -68,6 +82,28 @@
 
     .banner-ui-inputs {
         padding-top:20px;
+    }
+
+    .staked-dao-top {
+        flex-wrap:wrap;
+    }
+
+    .staked-dao-top .buttons-row {
+        margin-top:20px;
+        width:100%;
+    }
+
+    .staked-dao-top .buttons-row button {
+        width:100%;
+        padding:0;
+    }
+    
+}
+
+@media screen and (max-width:880px){
+
+    .inputs-line {
+        flex-wrap:wrap;
     }
 }
 
@@ -182,12 +218,7 @@
 
 }
 
-@media screen and (max-width:880px){
 
-    .inputs-line {
-        flex-wrap:wrap;
-    }
-}
 
 
 @media screen and (max-width:680px){
@@ -314,5 +345,13 @@
     .logged-in img {
         width:32px;
         height:32px;
+    }
+
+    .dashboard-top-info .full-space, .dashboard-top-info .search-container, .staked-dao-bottom .full-space {
+        width:100%;
+    }
+
+    .general-det {
+        flex-wrap:wrap;
     }
 }
