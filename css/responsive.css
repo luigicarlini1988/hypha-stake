@@ -1,0 +1,278 @@
+@media screen and (max-width:1200px){
+    .dao-grid {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-auto-columns: 1fr;
+        margin-top: 20px;
+    }
+
+    .network-banner.gap-40 {
+        gap:20px;
+    }
+
+    .network-metrics div:not(:first-child) {
+        margin-left: 14px;
+    }
+
+    .foglio {
+
+        padding:0px 28px;
+    }
+}
+
+
+@media screen and (max-width:980px){
+    .dao-grid {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-columns: 1fr;
+        margin-top: 20px;
+    }
+
+    .user-filter-bar .width-25 {
+        width:33.33%;
+    }
+
+    .user-filter-bar .width-50 {
+        width:calc(66.66% - 10px);
+    }
+
+    .network-banner {
+        display:block;
+    }
+
+    .network-banner .left-area {
+        display:flex;
+    }
+
+    .network-metrics {
+        padding-top:0;
+        padding-left:20px;
+    }
+
+    .network-banner .right-area {
+        padding-top:20px;
+    }
+
+    .banner-ui-inputs {
+        padding-top:20px;
+    }
+}
+
+@media screen and (max-width:784px){ 
+ nav {
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    z-index: 10;
+    left: 0;
+    padding: 10px 50px;
+    background:var(--dark-blu);
+    height:0;
+    overflow: hidden;
+    pointer-events: none;
+    transition-duration:.4s;
+ }
+
+ nav.show {
+    height:calc(100vh - 60px);
+    pointer-events: all;
+ }
+
+ nav ul li {
+    display: flex;
+ }
+
+ #resp-menu-icon {
+    display:block;
+    width:32px;
+    height:32px;
+    position:relative;
+    cursor:pointer;
+ }
+
+ #resp-menu-icon span {
+    width:20px;
+    height:1.5px;
+    border-radius:2px;
+    background-color:var(--white);
+    position:absolute;
+    transition-duration:.2s;
+    transform-origin: left;
+ }
+
+ #resp-menu-icon span:nth-child(1) {
+    top:10px;
+    left:6px;
+ }
+
+ #resp-menu-icon span:nth-child(2) {
+    top:16px;
+    left:6px;
+ }
+
+ #resp-menu-icon span:nth-child(3) {
+    top:22px;
+    left:6px;
+ }
+
+ #resp-menu-icon.close span:nth-child(2) {
+    opacity:0;
+ }
+
+ #resp-menu-icon.close span:nth-child(1) {
+    transform:rotate(45Deg);
+    top:9px;
+ }
+
+ #resp-menu-icon.close span:nth-child(3) {
+    transform:rotate(-45Deg);
+    top:23px;
+ }
+
+ .top-logo {
+    width:94px;
+    margin-left:10px;
+ }
+
+ header {
+    height:60px;
+ }
+
+
+
+ .banner-ui-inputs {
+  flex-wrap: wrap;
+  gap:8px;
+ }
+
+ .user-filter-bar {
+    display:block;
+    padding:20px;
+ }
+ 
+ .user-filter-bar .width-25,
+ .user-filter-bar .width-50 {
+    width:100%;
+    flex-wrap: wrap;
+        gap: 8px;
+ }
+ 
+ .network-banner {
+    padding:20px;
+ }
+
+ .user-filter-bar .width-50 {
+    margin-top:8px;
+ }
+
+
+}
+
+
+@media screen and (max-width:680px){
+    .dao-grid {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: 1fr;
+        grid-auto-columns: 1fr;
+        margin-top: 20px;
+    }
+
+    .network-banner .left-area {
+        display:block;
+        padding-bottom: 20px;
+        border-bottom: 1px solid var(--light-blu-trasp-hover);
+        width: 100%;
+    }
+    .network-metrics {
+        padding-top: 20px;
+        padding-left: 0px;
+    }
+
+    .right-area .flex.gap-20,
+    .network-metrics {
+        justify-content: space-between;
+    }
+
+    .network-metrics div:not(:first-child) {
+        margin-left:0;
+    }
+
+    
+    .network-banner {
+        padding:20px;
+    }
+
+    .foglio {
+        padding:0px 20px;
+    }
+
+    .title-36 {
+        font-size:22px;
+    }
+
+    .network-banner .title-20 {
+        font-size:16px;
+    }
+
+    #stake-modal-pop .foglio {
+        padding:0;
+        align-items: flex-end;
+        
+    }
+
+    #stake-modal-pop .modal-pop {
+        max-width:100%;
+        padding-bottom:30px;
+        border-radius:20px 20px 0px 0px;
+        
+    }
+
+    .stake-token-data {
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 12px;
+        padding-bottom: 20px;
+    }
+
+    .your-stake-data {
+        margin-top:20px;
+    }
+    input.your-stake-amount {
+        margin-top:8px;
+    }
+
+    .field-over-content {
+        top:26px;
+    }
+
+    .stake-top-info {
+        flex-wrap:wrap;
+        gap:10px;
+    }
+
+    .modal-pop .stake-bar {
+        width:100%;
+    }
+
+    .modal-pop .stake-bar .gap-20 {
+        justify-content: space-between;
+    }
+
+    #filter-modal-pop .foglio {
+        padding:10px;
+    }
+
+    .filters-head,
+    .filters-foot {
+        padding:20px;
+    }
+
+    .filters-body {
+        padding:20px;
+        height: calc(100svh - 200px);
+    }
+}

@@ -1,0 +1,773 @@
+:root {
+    --dark-blu: #111E3B;
+    --card-blu: #17294A;
+    --light-blu: #61A9FC;
+    --green: #20DD8E;
+    --light-blu-tra: rgba(97,169,252,0.08);
+    --light-blu-trasp: rgba(97,169,252,0.1);
+    --light-blu-trasp-hover: rgba(97,169,252,0.2);
+    --grey: #8E9EC3;    
+    --white: #F4F8FB;
+    --gradient: linear-gradient(35Deg, #61A9FC, #315BCE);   
+    --glow-shadow: 0px 0px 40px rgba(97,169,252,0.3);
+    --work: "Work Sans", sans-serif;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    
+}
+
+body,html {
+    margin:0;
+    font-family: var(--work);
+    color:var(--grey);
+    background-color:var(--dark-blu);
+    font-size:14px;
+    line-height:1.7em;
+    font-weight:300;
+}
+
+body::-webkit-scrollbar {
+    width: 6px;
+  }
+   
+body::-webkit-scrollbar-track {
+box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+   
+body::-webkit-scrollbar-thumb {
+background-color: var(--light-blu);
+outline: 1px solid var(--dark-blu);
+border-radius:6px;
+}
+
+.no-scroll {
+    overflow:hidden;
+}
+
+h1,h2,h3,h4,h5 {
+    color:var(--white);
+    font-weight:400;
+    margin:0;
+}
+
+p {
+    margin:0;
+}
+.white {
+    color:var(--white);
+}
+
+.grey {
+    color:var(--grey);
+}
+
+.green {
+    color:var(--green);
+}
+
+.light-blu{color:var(--light-blu);}
+
+.title-36 {
+    font-size:36px;
+    font-weight:300;
+    line-height:1em;
+}
+
+.title-26 {
+    font-size:26px;
+    font-weight:600;
+    line-height:1.2em;
+}
+
+.title-20 {
+    font-size:20px;
+    font-weight:600;
+    line-height:1.2em;
+}
+
+.text-12 {
+    font-size:12px;
+    line-height:1.2em;
+}
+
+button,
+.fake-button {
+    height:36px;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    padding:0px 30px;
+    color:var(--white);
+    font-weight:400;
+    font-size:14px;
+    border:none;
+    border-radius:4px;
+    cursor:pointer;
+    transition-duration: .3s;
+}
+
+button.primary,
+.fake-button.primary{
+    background:var(--gradient);
+}
+
+button.secondary,
+.fake-button.secondary{
+    background:var(--light-blu-trasp);
+}
+
+button.primary:hover,
+.fake-button.primary:hover {
+    box-shadow: var(--glow-shadow);
+}
+
+button.secondary:hover,
+.fake-button.secondary:hover{
+    background:var(--light-blu-trasp-hover);
+}
+
+/*my bootstrap stuff*/
+
+.flex {
+    display:flex;
+}
+
+.inline-flex {
+    display:inline-flex;
+}
+.wrap {
+    flex-wrap: wrap;
+}
+.space-center {
+ justify-content: space-between;
+}
+
+
+.align-center {
+    justify-content: space-around;
+}
+
+
+
+.gap-40 {
+    gap:40px;
+}
+.gap-20 {
+    gap:20px;
+}
+.gap-10 {
+    gap:10px;
+}
+
+.gap-6 {
+    gap:6px;
+}
+
+.gap-4 {
+    gap:4px;
+}
+
+.full-space {
+    width:100%;
+}
+
+.width-25 {
+    width:25%;
+}
+
+.width-50 {
+    width:50%;
+}
+
+.width-75 {
+    width:75%;
+}
+
+.hug-content {
+    width:max-content;
+}
+
+input {
+    background:var(--light-blu-trasp);
+    border:none;
+    border-radius:10px;
+    padding:12px;
+    color:var(--white);
+    line-height:1px;
+    transition-duration: .3s;
+    font-weight:300;
+    font-family: "work sans";
+    line-height:1em;
+    font-size:13px;
+}
+
+input:focus {
+    border:none;
+    outline: none;
+    color:var(--light-blu);
+
+}
+
+input:hover::placeholder {
+    
+    color:var(--light-blu);
+} 
+
+input:focus::placeholder {
+    opacity:0;
+}
+
+input::placeholder {
+    color:var(--grey);
+    font-weight:300;
+    line-height:1em;
+}
+
+.search-container input {
+    border-radius:10px 0px 0px 10px;
+}
+
+button.search-button {
+    width:48px;
+    height:100%;
+    background:var(--light-blu-trasp);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding:0;
+    border-radius:0px 10px 10px 0px;
+    border-left:1px solid rgba(153,167,200,20%);
+    transition-duration: .3s;
+}
+
+button.search-button:hover {
+    background:var(--light-blu);
+}
+
+button.search-button img {
+    width:24px;
+}
+
+.filter-ui-input {
+    border-radius:12px 0px 0px 12px;
+    padding:12px;
+    line-height:1em;
+    font-size:12px;
+    background:var(--light-blu-trasp);
+    min-width:max-content;
+    display:flex;
+    align-items: center;
+    gap:6px;
+}
+
+.search-container,
+.filter-container,
+.search-container .search-box,
+.filter-container .filter-ui-input  {
+    width:100%;
+    min-width:max-content;
+}
+
+/*layout stuff*/
+
+section, header {
+    display: flex;
+    justify-content: center;
+    width:100%;
+}
+
+header {
+    height:80px;
+    background-color:var(--card-blu);
+}
+.foglio {
+    max-width:1600px;
+    width:100%;
+    padding:0px 40px;
+}
+
+.centered-vertical {
+    align-items: center;
+}
+
+.network-header {
+    padding-top:20px;
+}
+
+.network-banner {
+    width:100%;
+    height:fit-content;
+    padding:30px;
+    border-radius:20px;
+    position:relative;
+    background-image: url('../img/network-header.jpeg');
+    background-size:cover;
+    border:1px solid var(--card-blu);
+    min-height:100px;
+    overflow:hidden;
+}
+
+.network-banner div {
+    position:relative;
+}
+
+.network-banner:before {
+    position:absolute;
+    width:100%;
+    height:100%;
+    background-color:var(--card-blu);
+    content:"";
+    opacity:.8;
+    top:0;
+    left:0;
+}
+
+.top-logo {
+    width:108px;
+}
+
+nav ul {
+    margin:0;
+    padding:0px 0px 0px 10px;
+}
+
+nav ul li {
+    list-style-type: none;
+    display:inline;
+    padding:12px;
+}
+
+nav ul li a {
+    transition-duration: .3s;
+    color:var(--white);
+    font-weight:300;
+}
+
+nav ul li a.current-page {
+    color:var(--light-blu);
+}
+
+a {
+    text-decoration: none;
+}
+
+.condensed-text p {
+    line-height:1.2em;
+}
+
+.network-metrics {
+    padding-top:40px;
+}
+
+.network-metrics div:not(:first-child) {
+    margin-left:40px;
+}
+
+.network-banner .progress-bar {
+    background: var(--light-blu-trasp-hover);
+}
+
+.progress-bar {
+    width:100%;
+    height:6px;
+    border-radius:6px;
+    margin-top:12px;
+}
+
+.network-banner .progress-bar .progress-inside-bar {
+    border-radius:6px;
+    height:6px;
+    width:22%;
+    background:var(--light-blu);
+}
+
+.banner-ui-inputs {
+    padding-top:40px;
+}
+
+.ui-input-data {
+    background:var(--light-blu-trasp);
+    border-radius:10px;
+    padding:0px 12px;
+    height:40px;
+    min-width:max-content;
+}
+
+.ui-input-data img {
+    height:14px;
+    margin-right:4px;
+}
+
+
+.user-filter-bar {
+    padding:12px;
+    border-radius: 16px;
+    background:var(--card-blu);
+    width:100%;
+}
+
+.dao-list {
+    padding-top:20px;
+    padding-bottom:60px;
+}
+
+.dao-grid {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-columns: 1fr;
+    margin-top:20px;
+}
+
+.dao-card {
+    width:100%;
+    min-height:400px;
+    border-radius:20px;
+    padding:20px;
+    background:var(--card-blu);
+
+}
+
+.top-dao-info {
+    text-align: center;
+    align-items: center;
+}
+
+.top-dao-info img.dao-logo {
+    width:80px;
+    height:80px;
+    border-radius: 100%;
+    object-fit: cover;
+    margin-top:12px;
+}
+
+.top-dao-info .dao-name {
+    margin:12px 0px 4px 0px;
+}
+
+.dao-activity-metrics {
+    margin-top:22px;
+    
+}
+
+.dao-stake-metrics {
+    margin-top:38px;
+}
+
+.dao-activity-metrics .ui-input-data,
+.dao-stake-metrics .ui-input-data {
+    margin-top:8px;
+}
+
+.stake-bar {
+    padding-bottom:8px;
+}
+.progress-bar.standard,
+.progress-bar.over-stake  {
+    background: var(--dark-blu);
+}
+
+.progress-bar.over-stake {
+    margin-top:6px;
+}
+
+.progress-bar.standard {
+    width:100%;
+    height:6px;
+    border-radius:6px;
+    margin-top:8px;
+}
+
+.progress-bar.standard .progress-inside-bar {
+    border-radius:6px;
+    height:6px;
+    width:66%;
+    background:var(--light-blu);
+}
+
+.progress-bar.standard.completed .progress-inside-bar {
+    width:100%;
+}
+
+.dao-card.overstaked .progress-bar.over-stake .progress-inside-bar {
+    border-radius:6px;
+    height:6px;
+    width:22%;
+    background:var(--green);
+}
+
+.dao-card-buttons {
+    margin-top:30px;
+}
+
+.dao-card-buttons button,
+.dao-card-buttons .fake-button  {
+    width:100%;
+}
+
+.dao-card.overstaked .progress-inside-bar {
+    width:100%;
+}
+
+.dao-card.overstaked .dao-stake-metrics {
+    margin-top:22px;
+}
+
+.your-dao {
+    position:relative;
+}
+
+.your-dao .avatar {
+    position:absolute;
+    right:20px;
+    top:20px;
+}
+
+.your-dao .avatar img {
+    width:32px;
+    height:32px;
+    object-fit: cover;
+    border-radius:100%;
+    border:1px solid var(--white);
+}
+
+#resp-menu-icon{
+    display:none;
+}
+
+.logo-cont a {
+    display:flex;
+}
+
+/* stake modal pop*/
+
+#stake-modal-pop,
+#filter-modal-pop {
+    background-color:rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    position:fixed;
+    top:0;
+    left:0;
+    height:100svh;
+    width:100%;
+    z-index:200;
+    opacity:0;
+    pointer-events: none;
+    transition-duration:.2s;
+}
+
+#stake-modal-pop.show,
+#filter-modal-pop.show {
+    opacity:1;
+    pointer-events: all;
+}
+
+#stake-modal-pop  .foglio,
+#filter-modal-pop .foglio {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-pop {
+    width:100%;
+    max-width:560px;
+    padding:20px;
+    border-radius:20px;
+    background-color:var(--card-blu);
+    min-height:200px;
+    position:relative;
+    transform:translateY(30px);
+    transition: all 400ms cubic-bezier(.47,1.64,.41,.8);
+}
+
+#stake-modal-pop.show .modal-pop {
+    transform:translateY(0px)
+}
+
+#close-stake-pop,
+#close-filter-pop {
+    position:absolute;
+    top:16px;
+    right:16px;
+    width:24px;
+    height:24px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    cursor:pointer;
+}
+
+#close-stake-pop img,
+#close-filter-pop img {
+    width:10px;
+}
+
+.dao-stake-logo {
+    width:60px;
+    height:60px;
+    border-radius: 60px;
+    object-fit: cover;
+    margin-right:12px;
+}
+
+.modal-pop .stake-bar {
+    width:50%;
+    padding-bottom: 0;
+    padding-top: 15px;
+}
+
+.stake-token-data {
+    margin-top:25px;
+    padding-bottom:25px;
+    border-bottom:1px solid var(--light-blu-trasp);
+}
+
+.your-stake-data {
+    margin-top:25px;
+}
+
+.field-wrapper {
+    width:100%;
+    position:relative;
+}
+
+.field-over-content {
+    width: max-content;
+    position: absolute;
+    top: 32px;
+    left: 12px;
+}
+
+.field-over-content img {
+    width:14px;
+    margin-right:4px;
+}
+
+input.your-stake-amount {
+    width:100%;
+    margin-top:14px;
+    font-size:22px;
+    text-align:right;
+    position:relative;
+}
+
+.modal-stake-actions {
+    width:100%;
+    margin-top:25px;
+}
+
+.modal-stake-actions button {
+    width:100%;
+}
+
+
+.filters {
+    width:660px;
+    border-radius:20px;
+    overflow:hidden;
+    position:relative;
+    transform:translateY(30px);
+    transition: all 400ms cubic-bezier(.47,1.64,.41,.8);
+}
+
+.filters-head,
+.filters-foot {
+    padding:30px;
+    background:var(--card-blu);
+    box-shadow:0px 0px 30px rgba(0,0,0,0.3);
+    z-index:2;
+    position:relative;
+}
+
+
+.filters-foot {
+    display:flex;
+    gap:20px;
+}
+
+.filters-body {
+    height:calc(100svh - 300px);
+    background:var(--dark-blu);
+    overflow-y:scroll;
+    padding:30px;
+    z-index:1;
+}
+
+.filters-body::-webkit-scrollbar {
+    width: 6px;
+  }
+   
+  .filters-body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+   
+  .filters-body::-webkit-scrollbar-thumb {
+    background-color: var(--light-blu);
+    outline: 1px solid var(--dark-blu);
+    border-radius:6px;
+  }
+
+.filters-foot button {
+    width:100%;
+    padding:0;
+}
+
+.dao-status-row {
+    margin-bottom:20px;
+    padding-bottom:25px;
+    border-bottom: 1px solid var(--light-blu-trasp);
+    flex-wrap:wrap;
+}
+
+.filters-row {
+    margin-bottom:20px;
+    padding-bottom:25px;
+    border-bottom: 1px solid var(--light-blu-trasp);
+}
+
+.dao-status {
+    padding:0px 12px;
+    height:36px;
+    border-radius:6px;
+    font-size:14px;
+    color:var(--white);
+    background:var(--light-blu-trasp);
+    display:flex;
+    align-items: center;
+    transition-duration:.3s;
+    cursor:pointer;
+    
+}
+
+.dao-status:hover {
+    background:var(--light-blu);
+}
+
+.dao-status.selected {
+    background:var(--gradient);
+}
+
+.filters input.your-stake-amount {
+   margin-top:8px;
+}
+
+.filters input.your-stake-amount::placeholder {
+    color:var(--white);
+}
+
+.filters .field-over-content {
+    top:26px;
+}
+
+
+#filter-modal-pop.show .filters {
+    transform:translateY(0px)
+}

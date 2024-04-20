@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <script type="text/javascript" src="js/interactions.js"></script>
+    <title>Hypha Stake Platform</title>
+</head>
+
+<body>
+    <header>
+        <div class="foglio flex space-center centered-vertical">
+            <div class="flex centered-vertical">
+                <span id="resp-menu-icon" onclick="toggleNavMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+                <div class="logo-cont flex centered-vertical">
+                    <a href="#"><img class="top-logo" src="img/logo-white.svg"></a>
+                </div>
+                <nav id="main-menu">
+                    <ul>
+                        <li><a href="#" class="current-page">Stake Hypha Tokens</a></li>
+                        <li><a href="#">Buy Hypha Tokens</a></li>
+                        <li><a href="#">Your Dashboard</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="login-area">
+                <button class="primary">Login/Connect</button>
+            </div>
+        </div>
+    </header>
+    <section class="network-header">
+        <div class="foglio">
+            <div class="network-banner gap-40 flex space-center">
+                <div class="hug-content left-area">
+                    <h2 class="title-36 white">Hypha Network</h2>
+                    <div class="flex network-metrics">
+                        <div class="condensed-text hug-content">
+                            <p class="title-20 white">300</p>
+                            <p class="text-12 grey">Published DAOs</p>
+                        </div>
+
+                        <div class="condensed-text hug-content">
+                            <p class="title-20 white">1,300</p>
+                            <p class="grey text-12">Active Members</p>
+                        </div>
+
+                        <div class="condensed-text hug-content">
+                            <p class="title-20 white">13,300</p>
+                            <p class="grey text-12">Proposals</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="full-space right-area">
+                    <div class="flex gap-20">
+                        <span class="text-12 grey">Network Stake Completion</span>
+                        <span class="text-12 white">16%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-inside-bar"></div>
+                    </div>
+                    <div class="banner-ui-inputs flex gap-20">
+                        <div class="ui-input-data full-space flex space-center centered-vertical gap-6">
+                            <div class="flex centered-vertical">
+                                <img src="img/logo-round.svg" />
+                                <span class="text-12 grey">Circulating Supply</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-12 white">1,200,000.0</span>
+                            </div>
+                        </div>
+
+                        <div class="ui-input-data full-space flex space-center centered-vertical gap-6">
+                            <div class="flex centered-vertical">
+                                <img src="img/logo-round.svg" />
+                                <span class="text-12 grey">Total Staked</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-12 white">200,000.0</span>
+                            </div>
+                        </div>
+
+                        <div class="ui-input-data full-space flex space-center centered-vertical gap-6">
+                            <div class="flex centered-vertical">
+                                <img src="img/logo-round.svg" />
+                                <span class="text-12 grey">To Stake</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-12 white">1,000,000.0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="dao-list">
+        <div class="foglio">
+            <div class="user-filter-bar flex space-center">
+                <div class="width-25">
+                    <div class="ui-input-data full-space flex space-center centered-vertical gap-6">
+                        <div class="flex centered-vertical">
+                            <img src="img/logo-round.svg" />
+                            <span class="text-12 grey">Your Balance</span>
+                        </div>
+                        <div class="flex">
+                            <span class="text-12 white">1,000,000.0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="width-50 flex gap-10">
+                    <div class="search-container flex">
+                        <input type="text" class="search-box" placeholder="Search by DAO name..">
+                        <button class="search-button"><img src="img/search.svg" /></button>
+                    </div>
+
+                    <div class="filter-container flex">
+                        <div class="filter-ui-input">Filter by <span class="white">Understaked DAOs</span></div>
+                        <button onclick="toggleFilters()" class="search-button"><img src="img/sort.svg" /></button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="dao-grid">
+                <div class="dao-card understaked">
+                    <div class="top-dao-info flex wrap">
+                        <div class="full-space">
+                            <img class="dao-logo" src="img/dao-logo.png" />
+                        </div>
+                        <div class="full-space">
+                            <p class="title-20 dao-name white">AwesomeDAO</p>
+                            <p class="grey-20 text-12">Active Since <span>360 days</span> <span class="white">Understaked</span></span></p>
+                        </div>
+                    </div>
+
+                    <div class="dao-activity-metrics">
+                        <div class="ui-input-data full-space flex space-center centered-vertical gap-6">
+                            <div class="flex centered-vertical">
+                                <img src="img/members.svg" />
+                                <span class="text-12 grey">DAO Members</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-12 white">77</span>
+                            </div>
+                        </div>
+                        <div class="ui-input-data full-space flex space-center centered-vertical gap-6">
+                            <div class="flex centered-vertical">
+                                <img src="img/proposals.svg" />
+                                <span class="text-12 grey">Proposals</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-12 white">1,200</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dao-stake-metrics">
+                        <div class="stake-bar">
+                            <div class="flex space-center">
+                                <span class="text-12 grey">Stake Progress</span>
+                                <span class="text-12 white">66%</span>
+                            </div>
+                            <div class="progress-bar standard">
+                                <div class="progress-inside-bar"></div>
+                            </div>
+                        </div>
+                        <div class="ui-input-data full-space flex space-center centered-vertical gap-6">
+                            <div class="flex centered-vertical">
+                                <img src="img/logo-round.svg" />
+                                <span class="text-12 grey">Requirement</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-12 white">1,200,000.0</span>
+                            </div>
+                        </div>
+                        <div class="ui-input-data full-space flex space-center centered-vertical gap-6">
+                            <div class="flex centered-vertical">
+                                <img src="img/logo-round.svg" />
+                                <span class="text-12 grey">To Stake</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-12 white">700,000.0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex dao-card-buttons gap-20">
+                        <a href="#" class="fake-button secondary">Details</a>
+                        <button class="primary" onclick="toggleModalStake()">Stake</button>
+                    </div>
+                </div>
+
+                <div class=" dao-card staked-1-1">
+                    <div class="top-dao-info flex wrap">
+                        <div class="full-space">
+                            <img class="dao-logo" src="img/dao-logo.png" />
+                        </div>
+                        <div class="full-space">
+                            <p class="title-20 dao-name white">AwesomeDAO</p>
+                            <p class="grey-20 text-12">Active Since <span>360 days</span> <span class="light-blu">Staked 1:1</span></span></p>
+                        </div>
+                    </div>
+
+                    <div class="dao-activity-metrics">
+                        <div class="ui-input-data full-space flex space-center centered-vertical gap-6">
+                            <div class="flex centered-vertical">
+                                <img src="img/members.svg" />
+                                <span class="text-12 grey">DAO Members</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-12 white">77</span>
+                            </div>
+                        </div>
+                        <div class="ui-input-data full-space flex space-center centered-vertical gap-6">
+                            <div class="flex centered-vertical">
+                                <img src="img/proposals.svg" />
+                                <span class="text-12 grey">Proposals</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-12 white">1,200</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dao-stake-metrics">
+                        <div class="stake-bar">
+                            <div class="flex space-center">
+                                <span class="text-12 grey">Stake Progress</span>
+                                <span class="text-12 white">100%</span>
+                            </div>
+                            <div class="progress-bar standard completed">
+                                <div class="progress-inside-bar"></div>
+                            </div>
+                        </div>
+                        <div class="ui-input-data full-space flex space-center centered-vertical gap-6">
+                            <div class="flex centered-vertical">
+                                <img src="img/logo-round.svg" />
+                                <span class="text-12 grey">Requirement</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-12 white">1,200,000.0</span>
+                            </div>
+                        </div>
+                        <div class="ui-input-data full-space flex space-center centered-vertical gap-6">
+                            <div class="flex centered-vertical">
+                                <img src="img/logo-round.svg" />
+                                <span class="text-12 grey">To Stake</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-12 white">700,000.0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex dao-card-buttons gap-20">
+                        <a href="#" class="fake-button secondary">Details</a>
+                        <button class="primary" onclick="toggleModalStake()">Stake</button>
+                    </div>
+                </div>
+
+                <div class="dao-card overstaked">
+                    <div class="top-dao-info flex wrap">
+                        <div class="full-space">
+                            <img class="dao-logo" src="img/dao-logo.png" />
+                        </div>
+                        <div class="full-space">
+                            <p class="title-20 dao-name white">AwesomeDAO</p>
+                            <p class="grey-20 text-12">Active Since <span>360 days</span> <span class="green">Overstaked</span></span></p>
+                        </div>
+                    </div>
+
+                    <div class="dao-activity-metrics">
+                        <div class="ui-input-data full-space flex space-center centered-vertical gap-6">
+                            <div class="flex centered-vertical">
+                                <img src="img/members.svg" />
+                                <span class="text-12 grey">DAO Members</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-12 white">77 of 88 Available</span>
+                            </div>
+                        </div>
+                        <div class="ui-input-data full-space flex space-center centered-vertical gap-6">
+                            <div class="flex centered-vertical">
+                                <img src="img/proposals.svg" />
+                                <span class="text-12 grey">Proposals</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-12 white">1,200</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dao-stake-metrics">
+                        <div class="stake-bar">
+                            <div class="flex space-center">
+                                <span class="text-12 grey">Stake Progress</span>
+                                <div class="inline-flex gap-4">
+                                    <span class="text-12 white">100%</span> <span class="text-12 green">+ 22%</span>
+                                </div>
+                            </div>
+                            <div class="progress-bar standard">
+                                <div class="progress-inside-bar"></div>
+                            </div>
+                            <div class="progress-bar over-stake">
+                                <div class="progress-inside-bar"></div>
+                            </div>
+                        </div>
+                        <div class="ui-input-data full-space flex space-center centered-vertical gap-6">
+                            <div class="flex centered-vertical">
+                                <img src="img/logo-round.svg" />
+                                <span class="text-12 grey">Requirement</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-12 white">1,200,000.0</span>
+                            </div>
+                        </div>
+                        <div class="ui-input-data full-space flex space-center centered-vertical gap-6">
+                            <div class="flex centered-vertical">
+                                <img src="img/logo-round.svg" />
+                                <span class="text-12 grey">Total Staked</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-12 white">1,700,000.0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex dao-card-buttons gap-20">
+                        <a href="#" class="fake-button secondary">Details</a>
+                        <button onclick="toggleModalStake()" class="primary">Stake</button>
+                    </div>
+                </div>
+
+                <div class="dao-card understaked your-dao">
+                    <div class="top-dao-info flex wrap">
+                        <div class="avatar"><img src="img/avatar.jpg" /></div>
+                        <div class="full-space">
+                            <img class="dao-logo" src="img/dao-logo.png" />
+                        </div>
+                        <div class="full-space">
+                            <p class="title-20 dao-name white">AwesomeDAO</p>
+                            <p class="grey-20 text-12">Active Since <span>360 days</span> <span class="white">Understaked</span></span></p>
+                        </div>
+                    </div>
+
+                    <div class="dao-activity-metrics">
+                        <div class="ui-input-data full-space flex space-center centered-vertical gap-6">
+                            <div class="flex centered-vertical">
+                                <img src="img/members.svg" />
+                                <span class="text-12 grey">DAO Members</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-12 white">77</span>
+                            </div>
+                        </div>
+                        <div class="ui-input-data full-space flex space-center centered-vertical gap-6">
+                            <div class="flex centered-vertical">
+                                <img src="img/proposals.svg" />
+                                <span class="text-12 grey">Proposals</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-12 white">1,200</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dao-stake-metrics">
+                        <div class="stake-bar">
+                            <div class="flex space-center">
+                                <span class="text-12 grey">Stake Progress</span>
+                                <span class="text-12 white">66%</span>
+                            </div>
+                            <div class="progress-bar standard">
+                                <div class="progress-inside-bar"></div>
+                            </div>
+                        </div>
+                        <div class="ui-input-data full-space flex space-center centered-vertical gap-6">
+                            <div class="flex centered-vertical">
+                                <img src="img/logo-round.svg" />
+                                <span class="text-12 grey">Requirement</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-12 white">1,200,000.0</span>
+                            </div>
+                        </div>
+                        <div class="ui-input-data full-space flex space-center centered-vertical gap-6">
+                            <div class="flex centered-vertical">
+                                <img src="img/logo-round.svg" />
+                                <span class="text-12 grey">To Stake</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-12 white">700,000.0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex dao-card-buttons gap-20">
+                        <a href="#" class="fake-button secondary">Details</a>
+                        <button onclick="toggleModalStake()" class="primary">Stake</button>
+                    </div>
+                </div>
+
+                <div class="dao-card understaked">
+                    <div class="top-dao-info flex wrap">
+                        <div class="full-space">
+                            <img class="dao-logo" src="img/dao-logo.png" />
+                        </div>
+                        <div class="full-space">
+                            <p class="title-20 dao-name white">AwesomeDAO</p>
+                            <p class="grey-20 text-12">Active Since <span>360 days</span> <span class="white">Understaked</span></span></p>
+                        </div>
+                    </div>
+
+                    <div class="dao-activity-metrics">
+                        <div class="ui-input-data full-space flex space-center centered-vertical gap-6">
+                            <div class="flex centered-vertical">
+                                <img src="img/members.svg" />
+                                <span class="text-12 grey">DAO Members</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-12 white">77</span>
+                            </div>
+                        </div>
+                        <div class="ui-input-data full-space flex space-center centered-vertical gap-6">
+                            <div class="flex centered-vertical">
+                                <img src="img/proposals.svg" />
+                                <span class="text-12 grey">Proposals</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-12 white">1,200</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dao-stake-metrics">
+                        <div class="stake-bar">
+                            <div class="flex space-center">
+                                <span class="text-12 grey">Stake Progress</span>
+                                <span class="text-12 white">66%</span>
+                            </div>
+                            <div class="progress-bar standard">
+                                <div class="progress-inside-bar"></div>
+                            </div>
+                        </div>
+                        <div class="ui-input-data full-space flex space-center centered-vertical gap-6">
+                            <div class="flex centered-vertical">
+                                <img src="img/logo-round.svg" />
+                                <span class="text-12 grey">Requirement</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-12 white">1,200,000.0</span>
+                            </div>
+                        </div>
+                        <div class="ui-input-data full-space flex space-center centered-vertical gap-6">
+                            <div class="flex centered-vertical">
+                                <img src="img/logo-round.svg" />
+                                <span class="text-12 grey">To Stake</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-12 white">700,000.0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex dao-card-buttons gap-20">
+                        <a href="#" class="fake-button secondary">Details</a>
+                        <button onclick="toggleModalStake()" class="primary">Stake</button>
+                    </div>
+                </div>
+
+                <div class="dao-card understaked">
+                    <div class="top-dao-info flex wrap">
+                        <div class="full-space">
+                            <img class="dao-logo" src="img/dao-logo.png" />
+                        </div>
+                        <div class="full-space">
+                            <p class="title-20 dao-name white">AwesomeDAO</p>
+                            <p class="grey-20 text-12">Active Since <span>360 days</span> <span class="white">Understaked</span></span></p>
+                        </div>
+                    </div>
+
+                    <div class="dao-activity-metrics">
+                        <div class="ui-input-data full-space flex space-center centered-vertical gap-6">
+                            <div class="flex centered-vertical">
+                                <img src="img/members.svg" />
+                                <span class="text-12 grey">DAO Members</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-12 white">77</span>
+                            </div>
+                        </div>
+                        <div class="ui-input-data full-space flex space-center centered-vertical gap-6">
+                            <div class="flex centered-vertical">
+                                <img src="img/proposals.svg" />
+                                <span class="text-12 grey">Proposals</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-12 white">1,200</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dao-stake-metrics">
+                        <div class="stake-bar">
+                            <div class="flex space-center">
+                                <span class="text-12 grey">Stake Progress</span>
+                                <span class="text-12 white">66%</span>
+                            </div>
+                            <div class="progress-bar standard">
+                                <div class="progress-inside-bar"></div>
+                            </div>
+                        </div>
+                        <div class="ui-input-data full-space flex space-center centered-vertical gap-6">
+                            <div class="flex centered-vertical">
+                                <img src="img/logo-round.svg" />
+                                <span class="text-12 grey">Requirement</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-12 white">1,200,000.0</span>
+                            </div>
+                        </div>
+                        <div class="ui-input-data full-space flex space-center centered-vertical gap-6">
+                            <div class="flex centered-vertical">
+                                <img src="img/logo-round.svg" />
+                                <span class="text-12 grey">To Stake</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-12 white">700,000.0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex dao-card-buttons gap-20">
+                        <a href="#" class="fake-button secondary">Details</a>
+                        <button onclick="toggleModalStake()" class="primary">Stake</button>
+                    </div>
+                </div>
+
+                <div class="dao-card understaked">
+                    <div class="top-dao-info flex wrap">
+                        <div class="full-space">
+                            <img class="dao-logo" src="img/dao-logo.png" />
+                        </div>
+                        <div class="full-space">
+                            <p class="title-20 dao-name white">AwesomeDAO</p>
+                            <p class="grey-20 text-12">Active Since <span>360 days</span> <span class="white">Understaked</span></span></p>
+                        </div>
+                    </div>
+
+                    <div class="dao-activity-metrics">
+                        <div class="ui-input-data full-space flex space-center centered-vertical gap-6">
+                            <div class="flex centered-vertical">
+                                <img src="img/members.svg" />
+                                <span class="text-12 grey">DAO Members</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-12 white">77</span>
+                            </div>
+                        </div>
+                        <div class="ui-input-data full-space flex space-center centered-vertical gap-6">
+                            <div class="flex centered-vertical">
+                                <img src="img/proposals.svg" />
+                                <span class="text-12 grey">Proposals</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-12 white">1,200</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dao-stake-metrics">
+                        <div class="stake-bar">
+                            <div class="flex space-center">
+                                <span class="text-12 grey">Stake Progress</span>
+                                <span class="text-12 white">66%</span>
+                            </div>
+                            <div class="progress-bar standard">
+                                <div class="progress-inside-bar"></div>
+                            </div>
+                        </div>
+                        <div class="ui-input-data full-space flex space-center centered-vertical gap-6">
+                            <div class="flex centered-vertical">
+                                <img src="img/logo-round.svg" />
+                                <span class="text-12 grey">Requirement</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-12 white">1,200,000.0</span>
+                            </div>
+                        </div>
+                        <div class="ui-input-data full-space flex space-center centered-vertical gap-6">
+                            <div class="flex centered-vertical">
+                                <img src="img/logo-round.svg" />
+                                <span class="text-12 grey">To Stake</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-12 white">700,000.0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex dao-card-buttons gap-20">
+                        <a href="#" class="fake-button secondary">Details</a>
+                        <button onclick="toggleModalStake()" class="primary">Stake</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="stake-modal-pop">
+        <div class="foglio">
+            <div class="modal-pop">
+                <div onclick="toggleModalStake()" id="close-stake-pop">
+                    <img src="img/close-icon.svg" />
+                </div>
+
+                <div class="stake-top-info flex space-center gap-20">
+                    <div class="flex centered-vertical">
+                        <img class="dao-stake-logo" src="img/dao-logo.png">
+                        <div class="dao-stake-name">
+                            <p class="text-12 grey">Stake for:</p>
+                            <p class="title-20 white">Awesome DAO</p>
+                        </div>
+                    </div>
+                    <div class="stake-bar">
+                        <div class="flex gap-20">
+                            <span class="text-12 grey">Stake Progress</span>
+                            <span class="text-12 white">66%</span>
+                        </div>
+                        <div class="progress-bar standard">
+                            <div class="progress-inside-bar"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stake-token-data flex gap-20">
+                    <div class="ui-input-data full-space flex space-center centered-vertical gap-6">
+                        <div class="flex centered-vertical">
+                            <img src="img/logo-round.svg" />
+                            <span class="text-12 grey">Stake Requirement</span>
+                        </div>
+                        <div class="flex">
+                            <span class="text-12 white">1,200,000.0</span>
+                        </div>
+                    </div>
+                    <div class="ui-input-data full-space flex space-center centered-vertical gap-6">
+                        <div class="flex centered-vertical">
+                            <img src="img/logo-round.svg" />
+                            <span class="text-12 grey">To Stake</span>
+                        </div>
+                        <div class="flex">
+                            <span class="text-12 white">700,000.0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="your-stake-data">
+                    <div class="ui-input-data full-space flex space-center centered-vertical gap-6">
+                        <div class="flex centered-vertical">
+                            <img src="img/logo-round.svg" />
+                            <span class="text-12 grey">Your Balance</span>
+                        </div>
+                        <div class="flex">
+                            <span class="text-12 white">1,200,000.0</span>
+                        </div>
+                    </div>
+                    <div class="field-wrapper">
+                        <input type="text" class="your-stake-amount" placeholder="700,000.0">
+                        <div class="field-over-content flex align-center">
+                            <img src="img/logo-round.svg" />
+                            <span class="text-12 white">Input Amount to Stake:</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-stake-actions flex gap-20">
+                    <button onclick="toggleModalStake()" class="secondary">Close</button>
+                    <button class="primary">Stake</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="filter-modal-pop">
+        <div class="foglio">
+            <div class="filters">
+
+                <div class="filters-head">
+                    <p class="title-20 white">Filters</p>
+                    <div onclick="toggleFilters()" id="close-filter-pop">
+                        <img src="img/close-icon.svg" />
+                    </div>
+                </div>
+                <div class="filters-body">
+                    <div class="dao-status-row flex gap-10">
+                        <div class="dao-status selected">Understaked</div>
+                        <div class="dao-status">Overstaked</div>
+                        <div class="dao-status">1:1Staked</div>
+                        <div class="dao-status">Your DAOs</div>
+                    </div>
+
+                    <div class="filters-row">
+                        <p class="white">Minimum Hypha Missing Stake</p>
+                        <div class="field-wrapper">
+                            <input type="text" class="your-stake-amount" placeholder="100.0">
+                            <div class="field-over-content flex align-center">
+                                <img src="img/logo-round.svg" />
+                                <span class="text-12 white">Hypha:</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filters-row">
+                        <p class="white">Maximum Hypha Missing Stake</p>
+                        <div class="field-wrapper">
+                            <input type="text" class="your-stake-amount" placeholder="100.0">
+                            <div class="field-over-content flex align-center">
+                                <img src="img/logo-round.svg" />
+                                <span class="text-12 white">Hypha:</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filters-row">
+                        <p class="white">Minimum DAO Members</p>
+                        <div class="field-wrapper">
+                            <input type="text" class="your-stake-amount" placeholder="1">
+                            <div class="field-over-content flex align-center">
+                                <img src="img/members.svg" />
+                                <span class="text-12 white">Members:</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filters-row">
+                        <p class="white">Minimum DAO Proposals</p>
+                        <div class="field-wrapper">
+                            <input type="text" class="your-stake-amount" placeholder="1">
+                            <div class="field-over-content flex align-center">
+                                <img src="img/proposals.svg" />
+                                <span class="text-12 white">Proposals:</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="filters-foot">
+                    <button class="secondary">Reset Filters</button>
+                    <button class="primary">Show 1234 DAOs</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
