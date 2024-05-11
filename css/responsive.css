@@ -4,7 +4,6 @@
         grid-gap: 20px;
         grid-template-columns: 1fr 1fr 1fr;
         grid-auto-columns: 1fr;
-        margin-top: 20px;
     }
 
     .network-banner.gap-40 {
@@ -52,7 +51,6 @@
         grid-gap: 20px;
         grid-template-columns: 1fr 1fr;
         grid-auto-columns: 1fr;
-        margin-top: 20px;
     }
 
     .user-filter-bar .width-25 {
@@ -215,8 +213,19 @@
     margin-top:8px;
  }
 
+ .user-filter-bar .grow-1:last-child{
+    padding-top:10px;
+    flex-wrap:wrap;
+ }
+
+ .user-filter-bar.logged-out .grow-1:last-child{
+    padding-top:0px;
+    flex-wrap:wrap;
+
 
 }
+
+
 
 
 
@@ -227,7 +236,6 @@
         grid-gap: 20px;
         grid-template-columns: 1fr;
         grid-auto-columns: 1fr;
-        margin-top: 20px;
     }
 
     .network-banner .left-area {

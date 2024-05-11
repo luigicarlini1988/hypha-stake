@@ -23,3 +23,10 @@ function toggleExtraPurpose() {
     document.getElementById("expand-purpose").classList.toggle("shown");
 }
 
+
+//toggle screens
+function toggleScreens(object) {
+    object.querySelector("div[id='toggle-dashboard']").classList.toggle("daos");
+    object.querySelector("div[id='toggle-dashboard']").classList.toggle("personal");
+}
+

@@ -209,6 +209,10 @@ button.secondary:hover,
     width:max-content;
 }
 
+.grow-1 {
+    flex:1;
+}
+
 input {
     background:var(--light-blu-trasp);
     border:none;
@@ -377,8 +381,22 @@ a {
     line-height:1.2em;
 }
 
+.network-header.condensed .right-area {
+    display: flex;
+    justify-content: flex-end;
+    flex-grow:1;
+}
+
 .network-metrics {
     padding-top:40px;
+}
+
+.network-metrics.inline {
+    padding-top:0px;
+}
+
+img.banner-logo {
+    width:32px;
 }
 
 .network-metrics div:not(:first-child) {
@@ -428,6 +446,78 @@ a {
     width:100%;
 }
 
+.user-filter-bar .avatar img {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    border-radius: 100%;
+    border: 1px solid var(--white);
+}
+
+img.banner-avatar {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    border-radius: 100%;
+    border: 1px solid var(--white);
+}
+
+#toggle-dashboard {
+    padding:6px;
+    background-color:var(--card-blu);
+    border-radius:10px;
+    position:relative;
+    width:max-content;
+    
+}
+
+
+#toggle-dashboard .select {
+    width:138px;
+    color:var(--grey);
+    height:36px;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    position:relative;
+    z-index:2;
+    transition-duration:.3s;
+    cursor:pointer;
+}
+
+#toggle-dashboard .select:hover {
+    color:var(--white);
+}
+
+
+#toggle-dashboard .back-thing {
+    position:absolute;
+    width:138px;
+    height:36px;
+    top:6px;
+    border-radius:6px;
+    background:var(--gradient);
+    z-index:1;
+    transition-duration:.3s;
+}
+
+#toggle-dashboard.daos .select:first-child {
+    color:var(--white);
+}
+
+#toggle-dashboard.personal .select:nth-child(2) {
+    color:var(--white);
+}
+
+#toggle-dashboard.personal .back-thing {
+    left:144px;
+}
+
+#toggle-dashboard.daos .back-thing {
+    left:6px;
+}
+
+
 .dao-list {
     padding-top:20px;
     padding-bottom:60px;
@@ -438,7 +528,7 @@ a {
     grid-gap: 20px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-auto-columns: 1fr;
-    margin-top:20px;
+
 }
 
 .dao-card {
@@ -994,4 +1084,20 @@ img.dao-token {
 
 .your-staked-daos-list {
     padding-bottom:60px;
+}
+
+.action-bars .user-filter-bar {
+    margin-top:20px;
+}
+
+.user-filter-bar.logged-out .search-container {
+    flex:3;
+}
+
+.user-filter-bar.logged-out .filter-container {
+    flex:1;
+}
+
+.empty-screen-banner {
+    padding-bottom:40px;
 }
