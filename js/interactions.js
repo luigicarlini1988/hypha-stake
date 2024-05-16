@@ -1,5 +1,5 @@
 //stake-pop-up
-function toggleModalStake() {
+function toggleModalStake() {    
     document.getElementById("stake-modal-pop").classList.toggle("show");
     document.body.classList.toggle("no-scroll");
 }
@@ -22,7 +22,6 @@ function toggleExtraPurpose() {
     document.getElementById("extra-purpose").classList.toggle("show");
     document.getElementById("expand-purpose").classList.toggle("shown");
 }
-
 
 //toggle screens
 function toggleScreens(object) {

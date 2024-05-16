@@ -7,10 +7,35 @@
     <link rel="icon" type="image/x-icon" href="img/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
+    <script type="text/javascript" src="js/api.js"></script>
+    <script type="text/javascript" src="js/utils.js"></script>
     <script type="text/javascript" src="js/interactions.js"></script>
+
+
+    <script type="text/javascript">
+        async function getDHO(dhoName) {
+            const data = await HyphaHDK.getDHO(dhoName);
+            if (!data) return;
+            //TODO: add loading state
+
+            document.getElementById("dao-logo-value").src = data?.logo;
+            document.getElementById("dao-name-value").innerText = data?.name;
+            document.getElementById("dao-active-since-value").innerText = timeSince(data?.activeSince);
+            document.getElementById("dao-purpose-value").innerText = data?.purpose;
+
+            document.getElementById("dao-agreement-count-value").innerText = data?.agreementCount;
+
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            getDHO('hypha')
+        })
+    </script>
     <title>Hypha :: DAO XYZ Details</title>
 </head>
 
@@ -60,17 +85,27 @@
             <div class="details-left">
                 <div class="card">
                     <div class="flex centered-vertical">
-                        <img class="dao-stake-logo" src="img/dao-logo.png">
+                        <img id="dao-logo-value" class="dao-stake-logo" src="img/dao-logo.png">
                         <div class="dao-stake-name">
-                            <p class="title-20 white">Awesome DAO</p>
-                            <p class="text-12 grey">Active Since 123 Days</p>
+                            <p id="dao-name-value" class="title-20 white">Awesome DAO</p>
+                            <p class="text-12 grey">Active Since <span id="dao-active-since-value"></span></p>
                         </div>
                     </div>
                     <div class="purpose">
-                        <p class="grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo...</p>
+                        <p class="grey" id="dao-purpose-value">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo...</p>
                     </div>
-                    <div id="expand-purpose" class="expand-purpose light-blu" onclick="toggleExtraPurpose()">read more <img src="img/back.svg" /></div>
-                    <div id="extra-purpose" class="more-purpose">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</div>
+                    <div id="expand-purpose" class="expand-purpose light-blu" onclick="toggleExtraPurpose()">read more
+                        <img src="img/back.svg" /></div>
+                    <div id="extra-purpose" class="more-purpose">Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo quis nostrud
+                        exercitation ullamco laboris nisi ut aliquip ex ea commodo, Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</div>
                 </div>
                 <div class="card">
                     <div class="details-stake-performance">
@@ -109,16 +144,16 @@
             <div class="full-space">
                 <div class="card">
                     <div class="full-space">
-                        <p class="title-16 white">DAO Activity Metrics</p>
+                        <p class="title-16 white">Activity</p>
                     </div>
                     <div class="flex gap-10 inputs-line">
                         <div class="ui-input-data full-space flex space-center centered-vertical gap-6">
                             <div class="flex centered-vertical">
                                 <img src="img/proposals.svg" />
-                                <span class="text-12 grey">Total Proposals</span>
+                                <span class="text-12 grey">Agreements</span>
                             </div>
                             <div class="flex">
-                                <span class="text-12 white">123</span>
+                                <span id="dao-agreement-count-value" class="text-12 white">123</span>
                             </div>
                         </div>
                         <div class="ui-input-data full-space flex space-center centered-vertical gap-6">
@@ -143,7 +178,7 @@
                 </div>
                 <div class="card">
                     <div class="full-space">
-                        <p class="title-16 white">DAO Token</p>
+                        <p class="title-16 white">Token</p>
                     </div>
                     <div class="flex gap-10 inputs-line">
                         <div class="ui-input-data full-space flex space-center centered-vertical gap-6">
@@ -176,40 +211,6 @@
                     </div>
                 </div>
 
-                <div class="card">
-                    <div class="full-space">
-                        <p class="title-16 white">DAO Members</p>
-                    </div>
-                    <div class="flex gap-10 inputs-line">
-                        <div class="ui-input-data full-space flex space-center centered-vertical gap-6">
-                            <div class="flex centered-vertical">
-                                <img src="img/members.svg" />
-                                <span class="text-12 grey">Total Members</span>
-                            </div>
-                            <div class="flex">
-                                <span class="text-12 white">70</span>
-                            </div>
-                        </div>
-                        <div class="ui-input-data full-space flex space-center centered-vertical gap-6">
-                            <div class="flex centered-vertical">
-                                <img src="img/members.svg" />
-                                <span class="text-12 grey">Admin Members</span>
-                            </div>
-                            <div class="flex">
-                                <span class="text-12 white">2</span>
-                            </div>
-                        </div>
-                        <div class="ui-input-data full-space flex space-center centered-vertical gap-6">
-                            <div class="flex centered-vertical">
-                                <img src="img/stakeholders.svg" />
-                                <span class="text-12 grey">Total Stakeholders</span>
-                            </div>
-                            <div class="flex">
-                                <span class="text-12 white">123</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
                 <div class="card">
                     <div class="full-space">
